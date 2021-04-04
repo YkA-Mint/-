@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    int k,val;
+    time_t t;
+    time(&t);
+    srand((unsigned int) t);
+    val=rand()%21;
+    k=-1;
+    while(k!=val)
+    {
+        printf("Enter an integer value between 0 and 20:");
+        scanf("%d",&k);
+        if(k<val)
+            printf("the value is too small\n");
+        if(k>val)
+            printf("The value is too big\n");
+    }
+    printf("Great,you find the value!\n");
+    return 0;
+}
