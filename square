@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    printf("Enter an integer value：");
+    scanf("%d",&i);
+    i=i+1;
+    printf("The new value for i is:%d",i);
+    return 0;
+}
