@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    double score,mean_scores,sum_scores;
+    int counter;
+    sum_scores=0;
+    for(counter=3;counter>=1;counter=counter-1)
+    {
+        printf("type the score\n");
+        scanf("%lf",&score);
+        sum_scores=sum_scores+score;
+    }
+    mean_scores=sum_scores/3;
+    printf("the mean is %lf",mean_scores);
+    return 0;
+}
