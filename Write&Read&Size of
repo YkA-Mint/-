@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+ int main()
+ {
+     int s,x,y,res;
+     printf("Enter an integer\n");
+     scanf("%d",&x);
+     printf("Enter an integer\n");
+     scanf("%d",&y);
+     res=x*y;
+     s=sizeof(int);
+     printf("The product is :%d\n",res);
+     printf("the size of integer is %d\n",s);
+     return 0;
+ }
