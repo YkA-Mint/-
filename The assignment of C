@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.141592
+int main()
+{
+    int x,y,z;
+    float real;
+    int* address;
+    char character;
+    x=3;
+    y=4;
+    z=4;
+    x=((y>3)||(z<4));
+    real=cos(z*pi);
+    real=(int)(x*pi*100);
+    character='a';
+    address=&x;
+    *address=y+3;
+    printf("The x is %d\n",x);
+    printf("The y is %d\n",y);
+    printf("The z is %d\n",z);
+    printf("The real is %f\n",real);
+    printf("The *address is %d\n",*address);
+    printf("The x is equal to the *address\n");
+    printf("The character is %c\n",character);
+    return 0;
+}
