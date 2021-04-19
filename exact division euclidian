@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float fifi,bubu,dada,nono;
+    printf("type a real fifi\n");
+    scanf("%f",&fifi);
+    printf("type a real bubu\n");
+    scanf("%f",&bubu);
+    nono=fifi;
+    dada=0;
+    while(nono>=bubu)
+    {
+        nono=nono-bubu;
+        dada=dada+1;
+    }
+    printf("dada is %f",dada);
+    return 0;
+}
