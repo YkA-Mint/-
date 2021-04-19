@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float bubu,fifi;
+    int rara,indice,nono;
+    printf("Please type an integer rara\n");
+    scanf("%d",&rara);
+    printf("Please type a real fifi\n");
+    scanf("%f",&fifi);
+    nono=0;
+    for(indice=1;indice<=rara;indice=indice+1)
+    {
+        printf("Type a real bubu\n");
+        scanf("%f",&bubu);
+        if (bubu>fifi)
+        {
+            nono=nono+1;
+        }
+    }
+    printf("nono is %d\n",nono);
+    return 0;
+}
