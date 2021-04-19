@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Please define the n\n");
+    int n,s,t;
+    s=1;
+    scanf("%d",&n);
+    for(t=1;t<=n;t=t+1)
+    {
+        s=t*s;
+    }
+    printf("the factorial %d is %d",n,s);
+    return 0;
+}
