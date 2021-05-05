@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char text[50];
+    printf("Enter a word containing at most 49 characters");
+    scanf("%49s",text);
+    printf("\n%s",text);
+    return 0;
+}
