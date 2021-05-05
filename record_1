@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct complex
+{
+    double re,im;
+};
+int main()
+{
+    struct complex p1,p2,p3;
+    double diag;
+    printf("Enter 2 complex numbers");
+    scanf("%lf%lf%lf%lf",&p1.re,&p1.im,&p2.im,&p2.re);
+    diag=((p1.re-p2.re)*(p1.re-p2.re)+(p1.im-p2.im)*(p1.im-p2.im));
+    p3=p1;
+    printf("%lf%lf%lf",diag,p3.re,p3.im);
+    return 0;
+}
