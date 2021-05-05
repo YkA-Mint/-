@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double Tval[10],average,sum;
+    int NbValSup,ind;
+    sum=0;
+    for(ind=0;ind<=9;ind++)
+    {
+        printf("Enter value %d ,please",ind);
+        scanf("%lf",&Tval[ind]);
+        sum=sum+Tval[ind];
+    }
+    average=sum/10;
+    NbValSup=0;
+    for(ind=0;ind<=9;ind++)
+    {
+        if(Tval[ind]>=average)
+        {
+            NbValSup=NbValSup+1;
+        }
+    }
+    printf("the average is %lf",average);
+    printf("the number is %d",NbValSup);
+    return 0;
+}
