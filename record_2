@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct position
+{
+    double x,y,z;
+};
+struct molecule
+{
+    int nb_at;
+    struct position atom[100];
+};
+int main()
+{
+    struct molecule m;
+    struct position loc3D;
+    double tmp;
+    printf("Enter position of atom 1");
+    scanf("%lf%lf%lf",&loc3D.x,&loc3D.y,&loc3D.z);
+    m.nb_at=0;
+    m.atom[0]=loc3D;
+    m.nb_at=1;
+    tmp=m.atom[0].x;
+    m.atom[0].x=m.atom[0].y;
+    m.atom[0].y=m.atom[0].z;
+    m.atom[0].z=tmp;
+    printf("%lf\t%lf\t%lf",m.atom[0].x,m.atom[0].y,m.atom[0].z);
+    return 0;
+}
