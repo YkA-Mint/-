@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define NL 10
+#define NC 5
+
+int main()
+{
+    int nlig,ncol,tab[NL][NC];
+    FILE*fp;
+    for(nlig=0;nlig<NL;nlig++)
+    {
+        for(ncol=0;ncol<NC;ncol++)
+        {
+            tab[nlig][ncol]=rand()-16300;
+        }
+    }
+    fp=fopen("titi.txt","w");
+    if(fp!=NULL)
+    {
+        for(nlig=0;nlig<NL;nlig++)
+        {
+            for(ncol=0;ncol<NC;ncol++)
+            {
+                fprintf(fp,"%d\t",tab[nlig][ncol]);
+            }
+            fprintf(fp,"\n");
+        }
+        fclose(fp);
+        fp=fopen("titi.txt","r");
+        if(fp!=NULL)
+        {
+            for(nlig=0;nlig<NL;nlig++)
+            {
+                for(ncol=0;ncol<NC;ncol++)
+                {
+                    fscanf(fp,"%d",&tab[nlig][ncol]);
+                }
+            }
+            fclose(fp);
+        }
+        else
+        {
+            printf("the file is wrong");
+        }
+    }
+    else
+    {
+        printf("the file is wrong");
+    }
+    return 0;
+}
